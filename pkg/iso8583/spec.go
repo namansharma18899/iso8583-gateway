@@ -1,0 +1,27 @@
+package iso8583
+
+var DefaultSpec = map[int]FieldSpec{
+	2:  {Number: 2, Name: "PAN", Length: 19, LenType: LLVAR, Encoding: ASCII},
+	3:  {Number: 3, Name: "Processing Code", Length: 6, LenType: Fixed, Encoding: ASCII},
+	4:  {Number: 4, Name: "Transaction Amount", Length: 12, LenType: Fixed, Encoding: ASCII},
+	7:  {Number: 7, Name: "Transmission Date/Time", Length: 10, LenType: Fixed, Encoding: ASCII},
+	11: {Number: 11, Name: "STAN", Length: 6, LenType: Fixed, Encoding: ASCII},
+	12: {Number: 12, Name: "Local Transaction Time", Length: 6, LenType: Fixed, Encoding: ASCII},
+	13: {Number: 13, Name: "Local Transaction Date", Length: 4, LenType: Fixed, Encoding: ASCII},
+	14: {Number: 14, Name: "Expiration Date", Length: 4, LenType: Fixed, Encoding: ASCII},
+	22: {Number: 22, Name: "POS Entry Mode", Length: 3, LenType: Fixed, Encoding: ASCII},
+	23: {Number: 23, Name: "Card Sequence Number", Length: 3, LenType: Fixed, Encoding: ASCII},
+	25: {Number: 25, Name: "POS Condition Code", Length: 2, LenType: Fixed, Encoding: ASCII},
+	32: {Number: 32, Name: "Acquiring Institution ID", Length: 11, LenType: LLVAR, Encoding: ASCII},
+	37: {Number: 37, Name: "Retrieval Reference Number", Length: 12, LenType: Fixed, Encoding: ASCII},
+	38: {Number: 38, Name: "Authorization ID Response", Length: 6, LenType: Fixed, Encoding: ASCII},
+	39: {Number: 39, Name: "Response Code", Length: 2, LenType: Fixed, Encoding: ASCII},
+	41: {Number: 41, Name: "Card Acceptor Terminal ID", Length: 8, LenType: Fixed, Encoding: ASCII},
+	42: {Number: 42, Name: "Card Acceptor ID Code", Length: 15, LenType: Fixed, Encoding: ASCII},
+	43: {Number: 43, Name: "Card Acceptor Name/Location", Length: 40, LenType: Fixed, Encoding: ASCII},
+	49: {Number: 49, Name: "Currency Code", Length: 3, LenType: Fixed, Encoding: ASCII},
+	52: {Number: 52, Name: "PIN Data", Length: 8, LenType: Fixed, Encoding: Binary},
+	54: {Number: 54, Name: "Additional Amounts", Length: 120, LenType: LLLVAR, Encoding: ASCII},
+	55: {Number: 55, Name: "ICC/EMV Data", Length: 999, LenType: LLLVAR, Encoding: ASCII},
+	70: {Number: 70, Name: "Network Management Info Code", Length: 3, LenType: Fixed, Encoding: ASCII},
+}
